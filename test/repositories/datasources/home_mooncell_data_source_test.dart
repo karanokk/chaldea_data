@@ -1,6 +1,5 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-
-import 'package:test/test.dart';
 
 import 'package:chaldea_data/src/repositories/datasources/home_mooncell_data_source.dart';
 import 'package:chaldea_data/src/entities/home_entity.dart';
@@ -17,7 +16,7 @@ void main() {
       try {
         await dataSource.saveHome(MockHomeEntity());
       } catch (e) {
-        expect(e, TypeMatcher<UnimplementedError>());
+        expect(e, isUnimplementedError);
       }
     });
   });
