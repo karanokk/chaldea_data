@@ -51,6 +51,10 @@ void main() {
 
       expect(entity.newCards.jpContainer[0].items[0].title, '司马懿〔莱妮丝〕#技能');
       expect(entity.newCards.jpContainer[0].items[1].title, '夏洛克·福尔摩斯#技能');
+
+      expect(entity.events.cnContainer[0].items[0].imageURL, contains('720px'));
+      expect(
+          entity.newCards.cnContainer[0].items[0].imageURL, contains('120px'));
     });
 
     test('fromJson() & toJson()', () {

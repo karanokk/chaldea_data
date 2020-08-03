@@ -1,4 +1,4 @@
-import 'package:html/parser.dart';
+import 'package:html/parser.dart' show parse;
 import 'package:html/dom.dart';
 
 import 'package:json_annotation/json_annotation.dart';

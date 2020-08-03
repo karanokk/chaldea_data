@@ -155,8 +155,14 @@ List<HomePageSection> _parseContainer(
         final aNode = aNodes[index];
         final tNode = titleNodes[index];
 
-        final imageSrc =
-            domain + aNode.querySelector('img').attributes['data-src'];
+        final imageSrc = domain +
+            aNode
+                .querySelector('img')
+                .attributes['data-srcset']
+                .split(', ')
+                .last
+                .split(' ')
+                .first;
         final href = domain + aNode.attributes['href'];
         var title = tNode.text;
         if (title.isEmpty) {
